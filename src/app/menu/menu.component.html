@@ -1,0 +1,41 @@
+<section class="menu-page">
+  <div class="menu-header">
+    <div>
+      <span class="menu-label">Full Menu</span>
+      <h2>Choose your flavor</h2>
+      <p>Browse breakfast, lunch, and dinner favorites with tasty details on every dish.</p>
+    </div>
+    <a class="contact-button" routerLink="/contact">Contact Us</a>
+  </div>
+
+  <div class="category-filter">
+    <button
+      *ngFor="let category of categories"
+      type="button"
+      (click)="selectCategory(category)"
+      [class.active]="selectedCategory === category"
+    >
+      {{ category }}
+    </button>
+  </div>
+
+  <div class="grid-list">
+    <article
+      *ngFor="let item of filteredItems"
+      class="dish-card"
+    >
+      <div class="dish-image">
+        <img [src]="item.image" [alt]="item.title" />
+        <div class="dish-badge">{{ item.badge }}</div>
+      </div>
+      <div class="dish-content">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+      <div class="dish-footer">
+        <span class="price">${{ item.price }}</span>
+        <button type="button" (click)="viewDetails(item)">Details</button>
+      </div>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+<section class="contact-page">
+  <div class="contact-card">
+    <span class="contact-label">Ade Food Point</span>
+    <h2>Get in Touch</h2>
+    <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+
+    <div class="info-grid">
+      <div>
+        <h3>Email</h3>
+        <p>ade@gmail.com</p>
+      </div>
+      <div>
+        <h3>Phone</h3>
+        <p>(555) 749 905 583</p>
+      </div>
+      <div>
+        <h3>Location</h3>
+        <p>DODOMA, University of Dodoma-UDOM(cive)</p>
+      </div>
+    </div>
+
+    <form #contactForm="ngForm" (ngSubmit)="sendMessage()" class="contact-form">
+      <div class="form-grid">
+        <label>
+          Name
+          <input type="text" name="name" [(ngModel)]="name" placeholder="Your name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" [(ngModel)]="email" placeholder="Your email" required />
+        </label>
+      </div>
+      <label class="message-field">
+        Message
+        <textarea name="message" [(ngModel)]="message" placeholder="Your message here..." required></textarea>
+      </label>
+      <button type="submit" [disabled]="!contactForm.form.valid">Send Message</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,164 @@
+.menu-page {
+  padding: 3rem 0;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.menu-label {
+  display: inline-flex;
+  font-size: 0.9rem;
+  color: #ff8a2b;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+}
+
+.menu-header h2 {
+  margin: 0;
+  font-size: 2.75rem;
+}
+
+.menu-header p {
+  color: #5b5b5b;
+  max-width: 560px;
+}
+
+.contact-button {
+  background: #ff8a2b;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.category-filter {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.category-filter button {
+  border: 1px solid #d8d0c4;
+  background: white;
+  color: #3b3b3b;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.category-filter button.active {
+  background: #ff8a2b;
+  color: white;
+  border-color: transparent;
+}
+
+.grid-list {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.dish-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 65px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dish-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.12);
+}
+
+.dish-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.dish-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dish-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+  background: #ff8a2b;
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.dish-content {
+  padding: 1.5rem 1.5rem 1rem;
+  flex: 1;
+}
+
+.dish-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.3rem;
+}
+
+.dish-card p {
+  color: #5d5d5d;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+
+.dish-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid #f0f0f0;
+  margin-top: auto;
+}
+
+.price {
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.dish-footer button {
+  background: #1f1f1f;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.3rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .menu-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

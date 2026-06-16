@@ -1,0 +1,25 @@
+<section class="detail-page" *ngIf="menuItem">
+  <div class="detail-image">
+    <img [src]="menuItem.image" [alt]="menuItem.title" />
+    <div class="detail-tag">{{ menuItem.badge }}</div>
+  </div>
+  <div class="detail-card">
+    <h2>{{ menuItem.title }}</h2>
+    <p class="detail-price">${{ menuItem.price }}</p>
+    <p class="detail-description">{{ menuItem.description }}</p>
+    <div class="detail-meta">
+      <div><strong>Category</strong><span>{{ menuItem.category }}</span></div>
+      <div><strong>Calories</strong><span>{{ menuItem.calories }}</span></div>
+    </div>
+    <div class="ingredients">
+      <h3>Ingredients</h3>
+      <ul>
+        <li *ngFor="let ingredient of menuItem.ingredients">{{ ingredient }}</li>
+      </ul>
+    </div>
+    <div class="detail-actions">
+      <button type="button" (click)="router.navigate(['/menu'])">Back to Menu</button>
+      <button type="button" class="primary">Order Now</button>
+    </div>
+  </div>
+</section>

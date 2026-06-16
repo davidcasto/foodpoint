@@ -1,0 +1,29 @@
+﻿<div class="app-shell">
+  <header class="site-header">
+    <div class="brand-block">
+      <div class="brand-mark">AF</div>
+      <span class="brand-text">Ade Food Point</span>
+    </div>
+    <nav class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/menu" routerLinkActive="active">Menu</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    </nav>
+  </header>
+
+  <main class="router-shell">
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Ade Food Point</span>
+      <span class="footer-links">
+        <a routerLink="/">Home</a>
+        <a routerLink="/menu">Menu</a>
+        <a routerLink="/contact">Contact</a>
+      </span>
+      <span class="footer-social">Instagram · Facebook</span>
+    </div>
+  </footer>
+</div>
